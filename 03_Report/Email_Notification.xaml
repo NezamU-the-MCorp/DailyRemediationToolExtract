@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1293,1439</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1213,1938</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Outlook_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
@@ -100,7 +100,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Email_Notification workflow" sap:VirtualizedContainerService.HintSize="476,1374" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Email_Notification workflow" sap:VirtualizedContainerService.HintSize="839,1873" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="table" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_InputDatatable" />
@@ -113,21 +113,21 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Email_Notification workflow : Started&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="797,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Email_Notification workflow : Started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputDatatable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" SheetName="Stats" WorkbookPath="[Path.Combine(in_Config(&quot;rt_extract_query_file&quot;).ToString,&quot;RT_queries.xlsx&quot;)]">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_InputDatatable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" PreserveFormat="True" SheetName="Stats" WorkbookPath="[Path.Combine(in_Config(&quot;rt_extract_query_file&quot;).ToString,&quot;RT_queries.xlsx&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_InputDatatable]</OutArgument>
       </Assign.To>
@@ -135,22 +135,22 @@
         <InArgument x:TypeArguments="sd:DataTable">[dt_InputDatatable.Select().Where(Function(row) CDate(row("CLOSURE_TIME").ToString) &gt;= Now.AddDays(-7)).CopyToDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_InputDatatable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Stats" WorkbookPath="[in_Config(&quot;RT_queries_download_file&quot;).ToString+&quot;\&quot;+&quot;RT_queries_&quot;+DateTime.Now.ToString(&quot;MM_dd_yyyy&quot;)+&quot;.xlsx&quot;]">
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_InputDatatable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="797,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Stats" WorkbookPath="[in_Config(&quot;RT_queries_download_file&quot;).ToString+&quot;\&quot;+&quot;RT_queries_&quot;+DateTime.Now.ToString(&quot;MM_dd_yyyy&quot;)+&quot;.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:WriteRange>
-    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dt_OutPutDataTable_Email]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Stats" WorkbookPath="[in_Config(&quot;RT_queries_download_file&quot;).ToString+&quot;\&quot;+&quot;RT_queries_&quot;+DateTime.Now.ToString(&quot;MM_dd_yyyy&quot;)+&quot;.xlsx&quot;]">
+    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="797,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dt_OutPutDataTable_Email]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Stats" WorkbookPath="[in_Config(&quot;RT_queries_download_file&quot;).ToString+&quot;\&quot;+&quot;RT_queries_&quot;+DateTime.Now.ToString(&quot;MM_dd_yyyy&quot;)+&quot;.xlsx&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">[isTodayAndYesterdayDatePresent]</OutArgument>
       </Assign.To>
@@ -158,7 +158,7 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_OutPutDataTable_Email]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,258" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_OutPutDataTable_Email]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="797,258" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -209,34 +209,44 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <If Condition="[isTodayAndYesterdayDatePresent]" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[isTodayAndYesterdayDatePresent]" sap:VirtualizedContainerService.HintSize="797,550" sap2010:WorkflowViewState.IdRef="If_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <Sequence DisplayName="Business" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_20">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DatabasetoHTML workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="03_Report\Html_Report.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="HtmlText">[table]</OutArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_OutPutDataTable_Email">[dt_OutPutDataTable_Email]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="HtmlText">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="table" />
+              </OutArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_OutPutDataTable_Email">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_OutPutDataTable_Email" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;***************This is an autogenerated email******************&lt;br&gt;&lt;br&gt;&lt;br&gt;Good Morning, &lt;br&gt;&lt;br&gt;&lt;br&gt;Please find below snowflake information for today, let me know if there are any questions&lt;br&gt;&lt;br&gt;&quot;+table+&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;If you have any questions, reach me anytime !&lt;br&gt;&lt;br&gt;&lt;br&gt;Regards,&lt;BR&gt;Nezam Uddin&lt;BR&gt;Mobile: (804) 528-7059&lt;BR&gt;Nezam.Uddin@cdph.ca.gov | NezamU@the-mcorp.com&lt;BR&gt;the-mcorp.com • LinkedIn • Twitter • Facebook&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;Subject&quot;).ToString+&quot;  &quot; +DateTime.Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="Nezam.Uddin@cdph.ca.gov">
+          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;***************This is an autogenerated email******************&lt;br&gt;&lt;br&gt;&lt;br&gt;Good Morning, &lt;br&gt;&lt;br&gt;&lt;br&gt;Please find below snowflake information for today, let me know if there are any questions.&lt;br&gt;&lt;br&gt;&quot;+table+&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;If you have any questions, reach me anytime !&lt;br&gt;&lt;br&gt;&lt;br&gt;Regards,&lt;BR&gt;Nezam Uddin&lt;BR&gt;Mobile: (804) 528-7059&lt;BR&gt;Nezam.Uddin@cdph.ca.gov | NezamU@the-mcorp.com&lt;BR&gt;the-mcorp.com • LinkedIn • Twitter • Facebook&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;Subject&quot;).ToString+&quot;  &quot; +DateTime.Now.ToString(&quot;MM/dd/yyyy HH:mm&quot;)]" To="Nezam.Uddin@cdph.ca.gov;Lakshmim@the-mcorp.com">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendOutlookMail.Files>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:SendOutlookMail>
@@ -247,35 +257,40 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke DatabasetoHTML workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="03_Report\Html_Report.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="HtmlText">[table]</OutArgument>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_OutPutDataTable_Email">[dt_OutPutDataTable_Email]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="HtmlText">
+                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="table" />
+              </OutArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_OutPutDataTable_Email">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_OutPutDataTable_Email" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InvokeWorkflowFile>
-          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;***************This is an autogenerated email******************&lt;br&gt;&lt;br&gt;&lt;br&gt;Good Morning, &lt;br&gt;&lt;br&gt;&lt;br&gt;Please find below snowflake information for today, let me know if there are any questions&lt;br&gt;&lt;br&gt;&quot;+table+&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;If you have any questions, reach me anytime !&lt;br&gt;&lt;br&gt;&lt;br&gt;Regards,&lt;BR&gt;Nezam Uddin&lt;BR&gt;Mobile: (804) 528-7059&lt;BR&gt;Nezam.Uddin@cdph.ca.gov | NezamU@the-mcorp.com&lt;BR&gt;the-mcorp.com • LinkedIn • Twitter • Facebook&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;Subject&quot;).ToString+&quot;  &quot; +DateTime.Now.ToString(&quot;MM/dd/yyyy&quot;)]" To="Nezam.Uddin@cdph.ca.gov">
+          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;***************This is an autogenerated email******************&lt;br&gt;&lt;br&gt;&lt;br&gt;Good Morning, &lt;br&gt;&lt;br&gt;&lt;br&gt;Please find below snowflake information for today, let me know if there are any questions.&lt;br&gt;&lt;br&gt;&quot;+table+&quot;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;If you have any questions, reach me anytime !&lt;br&gt;&lt;br&gt;&lt;br&gt;Regards,&lt;BR&gt;Nezam Uddin&lt;BR&gt;Mobile: (804) 528-7059&lt;BR&gt;Nezam.Uddin@cdph.ca.gov | NezamU@the-mcorp.com&lt;BR&gt;the-mcorp.com • LinkedIn • Twitter • Facebook&quot;]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" Subject="[in_Config(&quot;Subject&quot;).ToString+&quot;  &quot; +DateTime.Now.ToString(&quot;MM/dd/yyyy HH:mm&quot;)]" To="Nezam.Uddin@cdph.ca.gov">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </ui:SendOutlookMail.Files>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:SendOutlookMail>
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Email_Notification workflow : Ended&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="797,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Email_Notification workflow : Ended&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
