@@ -1,0 +1,19 @@
+<html app='chrome.exe' htmlwindowname='1661357212565' title='Worksheet - New Worksheet' />
+<webctrl css-selector='body&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;span&gt;div&gt;div&gt;div&gt;div&gt;form&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div&gt;div' parentid='sleet-component-1189' tag='DIV' />
+
+
+https://login.microsoftonline.com/
+https://teams.microsoft.com/_#/lm=deeplink&lmsrc=officeWaffle&login_hint_safe=Nezam.Uddin@cdph.ca.gov
+
+https://teams.microsoft.com/_#/files/DVR%20-%20Digital%20Vaccine%20Record?
+threadId=19:3542cea477e444678d0ecd7e831de357@thread.skype&ctx=channel&rootfolder=%252Fsites%252FVaccineManagementSystem%252FShared%2520Documents%252FDVR%2520-%2520Digital%2520Vaccine%2520Record%252FAutomated%2520Reporting%2520%255BDO%2520NOT%2520MOVE-RENAME-DELETE%255D%252FDaily%2520Remediation%2520Tool%2520Extract
+
+<html app='chrome.exe' title='Worksheet - New Worksheet' />
+<webctrl aaname='Change' parentid='sleet-component-1189' tag='SPAN' />
+
+<html app='chrome.exe' title='Worksheet - New Worksheet' />
+<webctrl aaname='Change' parentid='sleet-component-1189' tag='SPAN' />
+
+
+\\PHITPRLCSRVIP04\PERS\HEDIS\
+
