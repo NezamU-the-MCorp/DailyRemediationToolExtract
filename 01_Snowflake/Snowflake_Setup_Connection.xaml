@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1065,3755</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>980,3956</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_02_Setup_Connection_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -85,7 +85,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Snowflake_Setup_Connection workflow" sap:VirtualizedContainerService.HintSize="518,3690" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Snowflake_Setup_Connection workflow" sap:VirtualizedContainerService.HintSize="518,3891" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="IsPublicRoleExists" />
     </Sequence.Variables>
@@ -108,7 +108,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9330139-a175-40bd-a295-77be5687e899" InformativeScreenshot="8c1a78aeac8ea98093a941dbaf491c35" Selector="&lt;html app='chrome.exe' title='Worksheet*' /&gt;&lt;webctrl parentid='sleet-component-1189' tag='DIV' class='styles__sql-worksheet-context-setting-item___SCr2o' innertext='PUBLIC' /&gt;" WaitForReady="COMPLETE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d9330139-a175-40bd-a295-77be5687e899" InformativeScreenshot="8c1a78aeac8ea98093a941dbaf491c35" Selector="&lt;html app='chrome.exe' title='Worksheet - New Worksheet' /&gt;&lt;webctrl aaname='CA_VACCINE_DEV' parentid='sleet-component-1189' tag='DIV' /&gt;" WaitForReady="COMPLETE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -142,7 +142,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="923decce-c95a-49f6-9d28-c2ac8a263d68" InformativeScreenshot="4a50c41475c4b3a2a07e1a84ff3bb856" Selector="&lt;html app='chrome.exe' title='Worksheet - New Worksheet' /&gt;&lt;webctrl aaname='Change' parentid='sleet-component-1189' tag='SPAN' /&gt;" TimeoutMS="1200" WaitForReady="COMPLETE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="923decce-c95a-49f6-9d28-c2ac8a263d68" InformativeScreenshot="4a50c41475c4b3a2a07e1a84ff3bb856" Selector="&lt;html app='chrome.exe' title='*New Worksheet' /&gt;&lt;webctrl aaname='Change' parentid='sleet-component-1189' tag='SPAN' /&gt;" TimeoutMS="1200" WaitForReady="COMPLETE" />
               </ui:Click.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -157,7 +157,7 @@
         <ActivityFunc x:TypeArguments="x:Boolean">
           <ui:UiElementExists DisplayName="IsPublicRole Element Exists" Exists="[IsPublicRoleExists]" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07872595-3942-4daa-9827-3c7b22b347b0" Selector="&lt;html app='chrome.exe' title='Worksheet - New Worksheet' /&gt;&#xA;&lt;webctrl aaname='Role' parentid='sleet-component-1189' tag='SPAN' /&gt;&#xA;&lt;nav up='2' /&gt;&#xA;&lt;webctrl parentid='sleet-component-1189' tag='DIV' class='react-selectize-search*' /&gt;&#xA;" TimeoutMS="1000" WaitForReady="COMPLETE" />
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07872595-3942-4daa-9827-3c7b22b347b0" Selector="&lt;html app='chrome.exe' title='*New Worksheet' /&gt;&lt;webctrl aaname='Role' parentid='sleet-component-1189' tag='SPAN' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='sleet-component-1189' tag='DIV' class='react-selectize-search*' /&gt;" TimeoutMS="1000" WaitForReady="COMPLETE" />
             </ui:UiElementExists.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -170,6 +170,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
@@ -269,7 +270,7 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'VWH_DVR_REMEDIATION' Worksheet'" sap:VirtualizedContainerService.HintSize="434,710" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="9e63bae27c6e32ad99bf4b037cf9f819" Selector="&lt;html app='chrome.exe' title='W*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'VWH_DVR_REMEDIATION' Worksheet'" sap:VirtualizedContainerService.HintSize="434,710" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="6d6fea70bf4225b70eab4135be63bd13" Selector="&lt;html app='chrome.exe' title='*New Worksheet' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -358,7 +359,7 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser CA_VACCINE from Role 'Worksheet'" sap:VirtualizedContainerService.HintSize="434,657" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="9e63bae27c6e32ad99bf4b037cf9f819" Selector="&lt;html app='chrome.exe' title='W*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser CA_VACCINE from Role 'Worksheet'" sap:VirtualizedContainerService.HintSize="434,657" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="9e63bae27c6e32ad99bf4b037cf9f819" Selector="&lt;html app='chrome.exe' title='*New Worksheet' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -458,14 +459,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:BrowserScope>
     </Sequence>
-    <Sequence DisplayName="Sequence 'CA_VACCINE dev ' worksheet" sap:VirtualizedContainerService.HintSize="476,234" sap2010:WorkflowViewState.IdRef="Sequence_28">
+    <Sequence DisplayName="Sequence 'CA_VACCINE dev ' worksheet" sap:VirtualizedContainerService.HintSize="476,435" sap2010:WorkflowViewState.IdRef="Sequence_28">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1200" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
@@ -490,13 +491,13 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CA_VACCINE dev Worksheet'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9e63bae27c6e32ad99bf4b037cf9f819" Selector="&lt;html app='chrome.exe' title='W*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'CA_VACCINE dev Worksheet'" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_4" InformativeScreenshot="9e63bae27c6e32ad99bf4b037cf9f819" Selector="&lt;html app='chrome.exe' title='*New Worksheet' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_36">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_36">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -541,7 +542,7 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BrowserScope>

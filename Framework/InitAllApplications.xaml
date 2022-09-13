@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>793,662</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>980,662</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -69,6 +69,7 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="376,597" sap2010:WorkflowViewState.IdRef="Sequence_9">
@@ -86,9 +87,15 @@
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Snowflake_Credential" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[secStr_Snowflake_Pass]" Username="[str_Snowflake_UserName]" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke 01_Snowflack workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="01_Snowflake\Snowflake_Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Snowflake_UserName">[str_Snowflake_UserName]</InArgument>
-        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secStr_Snowflake_Pass">[secStr_Snowflake_Pass]</InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Snowflake_UserName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_Snowflake_UserName" />
+        </InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_secStr_Snowflake_Pass">
+          <mva:VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="secStr_Snowflake_Pass" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
