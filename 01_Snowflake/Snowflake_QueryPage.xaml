@@ -5,7 +5,7 @@
   <this:_001_Snowflack_QueryPage.in_Config>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
   </this:_001_Snowflack_QueryPage.in_Config>
-  <sap:VirtualizedContainerService.HintSize>980,3417</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>981,2733</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -76,7 +76,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Snowflake_QueryPage" sap:VirtualizedContainerService.HintSize="915,3352" sap2010:WorkflowViewState.IdRef="Sequence_30">
+  <Sequence sap2010:Annotation.AnnotationText="Verifying that the schema is exists or not" DisplayName="Snowflake_QueryPage" sap:VirtualizedContainerService.HintSize="991,2668" sap2010:WorkflowViewState.IdRef="Sequence_30">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="IsDownloadButtonExists" />
       <Variable x:TypeArguments="x:Boolean" Name="IsSelectRoleExists" />
@@ -89,96 +89,38 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="873,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Snowflake_QueryPage workflow : Started &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="949,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Snowflake_QueryPage workflow : Started &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="873,2655" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
+    <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="949,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="949,2130" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="831,2323" sap2010:WorkflowViewState.IdRef="Sequence_31">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="907,1798" sap2010:WorkflowViewState.IdRef="Sequence_31">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Downloading rt_extract file" BrowserType="Chrome" DisplayName="Attach Browser 'New Query Worksheet'" sap:VirtualizedContainerService.HintSize="789,2231" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="543c3ccf049aac702238b2099967ae09" Selector="&lt;html app='chrome.exe' title='Worksheet - New Worksheet' /&gt;">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Downloading rt_extract file" BrowserType="Chrome" DisplayName="Attach Browser 'New Query Worksheet'" sap:VirtualizedContainerService.HintSize="865,1706" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="543c3ccf049aac702238b2099967ae09" Selector="&lt;html app='chrome.exe' title='Worksheet - New Worksheet' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="New Query Worksheet" sap:VirtualizedContainerService.HintSize="755,2014" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                  <Sequence DisplayName="New Query Worksheet" sap:VirtualizedContainerService.HintSize="831,1489" sap2010:WorkflowViewState.IdRef="Sequence_28">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:UiElementExists DisplayName="Element Exists 'Database tab'" Exists="[IsDatabaseTabExists]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7184104d-2942-44f4-a4bf-cd1a6b2e029d" InformativeScreenshot="51664d238d8c10276b43f2c4a879596b" Selector="&lt;wnd app='chrome.exe' title='Worksheet*' /&gt;&lt;ctrl name='Worksheet*' role='document' /&gt;&lt;ctrl name='Databases' role='push button' /&gt;&lt;ctrl role='grouping' text='Databases' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
-                      </ui:UiElementExists.Target>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:UiElementExists>
-                    <If Condition="[IsDatabaseTabExists]" sap:VirtualizedContainerService.HintSize="713,248" sap2010:WorkflowViewState.IdRef="If_6">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <If.Then>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Database tab is present&quot;]">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:LogMessage>
-                      </If.Then>
-                      <If.Else>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Database page is not present&quot;]">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:LogMessage>
-                      </If.Else>
-                    </If>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="713,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'BUTTON'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
-                            <ui:UiElementExists.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60486867-90e5-43b2-a96a-a6a833a94374" InformativeScreenshot="3a629d6898e2ea26a46ab3a420a67020" Selector="&lt;webctrl aaname='Go to New UI' parentid='ext-element-1' tag='BUTTON' type='button' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:UiElementExists.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:UiElementExists>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                    <ui:UiElementExists DisplayName="Element Exists of VACCINE_FINDER_ROLE from Role" Exists="[IsSelectRoleExists]" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                    <ui:UiElementExists DisplayName="Element Exists of VACCINE_FINDER_ROLE from Role" Exists="[IsSelectRoleExists]" sap:VirtualizedContainerService.HintSize="789,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5da65292-7963-4f7c-b89c-8b753e34fdd4" InformativeScreenshot="08eb33d5623295857fd77642536eb8c6" Selector="&lt;webctrl aaname='CA_VACCINE_DEV' parentid='sleet-component-1189' tag='DIV' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
                       </ui:UiElementExists.Target>
@@ -188,7 +130,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:UiElementExists>
-                    <If Condition="[IsSelectRoleExists]" sap:VirtualizedContainerService.HintSize="713,507" sap2010:WorkflowViewState.IdRef="If_9">
+                    <If Condition="[IsSelectRoleExists]" sap:VirtualizedContainerService.HintSize="789,507" sap2010:WorkflowViewState.IdRef="If_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,7 +138,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Select Role page is present&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Select Role page is present&quot;]">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:LogMessage>
                       </If.Then>
                       <If.Else>
                         <Sequence DisplayName="Snowflake_Setup_Connection workflow" sap:VirtualizedContainerService.HintSize="410,350" sap2010:WorkflowViewState.IdRef="Sequence_25">
@@ -243,7 +191,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'chrome.exe Worksheet'" sap:VirtualizedContainerService.HintSize="713,558" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="5f13584126f2bed2c21a8d1d03b98f05" Selector="&lt;wnd app='chrome.exe' title='Worksheet*' /&gt;">
+                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'chrome.exe Worksheet'" sap:VirtualizedContainerService.HintSize="789,558" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="5f13584126f2bed2c21a8d1d03b98f05" Selector="&lt;wnd app='chrome.exe' title='Worksheet*' /&gt;">
                       <ui:WindowScope.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -308,7 +256,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:WindowScope>
-                    <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayMS="[CInt(in_Config(&quot;MediumDelay&quot;).ToString)]" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                    <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayMS="[CInt(in_Config(&quot;MediumDelay&quot;).ToString)]" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="789,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -371,11 +319,11 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <If Condition="[IsDownloadButtonExists]" sap:VirtualizedContainerService.HintSize="873,272" sap2010:WorkflowViewState.IdRef="If_10">
+    <If Condition="[IsDownloadButtonExists]" sap:VirtualizedContainerService.HintSize="949,51" sap2010:WorkflowViewState.IdRef="If_10">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
@@ -399,7 +347,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="873,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Process_Snowflake_QueryPage workflow : Ended &quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="949,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Process_Snowflake_QueryPage workflow : Ended &quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>

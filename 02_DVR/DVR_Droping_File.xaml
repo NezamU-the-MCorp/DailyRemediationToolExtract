@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>793,3457</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1183,3581</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>_01_DVR_Droping_File_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
@@ -81,7 +81,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DVR_Droping_File Workflow" sap:VirtualizedContainerService.HintSize="672,3392" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DVR_Droping_File Workflow" sap:VirtualizedContainerService.HintSize="672,3516" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="IsFileExists" />
       <Variable x:TypeArguments="x:String" Name="DailyRemediationToolExtract_Path" />
@@ -293,5 +293,6 @@
       </ui:ExcelApplicationScope>
     </Sequence>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="630,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;DVR_Droping_File workflow : Ended&quot;]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="630,84" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;rt_extract.csv file has been moved to  archive folder &quot;]" />
   </Sequence>
 </Activity>
